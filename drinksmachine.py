@@ -5,7 +5,14 @@ selecting = True
 #list of drinks
 drinks = 'COCA-COLA,DIET COKE,COKE ZERO,DR PEPPER,DR PEPPER ZERO,IRN BRU,IRN BRU XTRA,MONSTER ORIGINAL,MONSTER NITRO,MONSTER MANGO LOCO,MONSTER MONARCH,MONSTER ULTRA,CAPRI SUN,BLOOD OF INNOCENTS,DIET BLOOD OF INNOCENTS,CHERRY BLOOD OF INNOCENTS,BLOOD OF INNOCENTS LIME TWIST,JUST WATER,STRAWBERRY MILKSHAKE,MYSTERY SPECIAL'.split(',')
 
-
+dispenseASCII = '''===========
+DISPENSING:
+     |
+     |
+     |
+    ===
+{0}
+    ==='''
 
 while selecting:
 
@@ -23,18 +30,7 @@ while selecting:
             confirming = False
             selecting = False
 
-            print('''===========
-DISPENSING:
-     |
-     |
-     |
-    ===''')
-            print(drinks[choice])
-            print('==========')
+            print(dispenseASCII.format(drinks[choice]))
 
         if confirmation == 'CANCEL':
             confirming = False
-
-
-
-    
